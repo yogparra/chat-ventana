@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>   
+    <script src="botchat.js"></script>
+    <link href="botchat.css" rel="stylesheet" />  
+    <link href="estilo-bot.css" rel="stylesheet" /> 
+  </head>
+  <body>
+     <!-- botchat !-->
+     <asp:UpdatePanel ID="udpChatbot" runat="server" ChildrenAsTriggers="false" UpdateMode="Conditional">
+        <ContentTemplate>
+            <div id="chat-bot">
+                <div class='wrapper-bot'>
+                    <span class='switch-icons-bot'>-</span>
+                    <h2 class='title-bot'>MINVU - Dinbot Chat</h2>
+                    <div class='content-bot'>
+                        <div id="bot" />
+                    </div>
+                </div>
+            </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+    <script language="JavaScript" type="text/javascript">
+        $('.switch-icons-bot').on('click', function () {
+            if ($(this).html() === '-') { $(this).html('+'); }
+            else $(this).html('-')
+            $('.content-bot').slideToggle();
+        });
+    </script>
+    <script language="JavaScript" type="text/javascript">
+        BotChat.App({
+            directLine: { secret: 'xxxx-xxxxx-xxxxx-xxxx' },
+            user: { id: 'Usuario' },
+            bot: { id: 'dinbot' },
+            locale: 'es',
+            resize: 'detect'
+        }, document.getElementById("bot"));
+    </script>
+    <!-- botchat !-->
+
+  </body>
+</html>

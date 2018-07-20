@@ -1,0 +1,57 @@
+#chat-bot {
+    bottom: 0px !important;
+    right: 0 !important;
+    height: 1200px !important;
+    max-height: 100% !important;
+    width: 400px !important;
+    position: fixed;
+}
+.wrapper-bot{
+    max-height: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+        
+}
+.title-bot{
+    background-image: url("bicolor-bg.png") ;
+    background-repeat: no-repeat;
+    background-color: #0078d7;    
+    margin: 0;
+    color:#fff;
+    padding:0 0 0 2px;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    box-sizing: content-box;
+    font-weight: 500;
+    height: 30px;
+    left: 0;
+    letter-spacing: 0.5px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    /*padding-top: 10px;*/
+    padding-left: 3px;
+    
+}
+.switch-icons-bot{
+    /*background:#000;*/
+    position:absolute;
+    right:0;
+    top:-1px;
+    z-index:1;
+    font-size:16px;
+    width:27px;
+    height:30px;
+    text-align:center;
+    display:inline-block;
+    color:#fff;
+    cursor:pointer;
+    line-height:27px;
+}
+.content-bot{
+    border:1px solid #ccc;
+    height:400px;
+    /*line-height:100px;*/
+    /*text-align:center;*/
+    background-color: #ffffff;
+}
